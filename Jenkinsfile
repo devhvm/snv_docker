@@ -12,15 +12,5 @@ node {
             }
 
         }
-
-        def dockerImage
-        stage('build docker') {
-        }
-
-        stage('publish docker') {
-            docker.withRegistry('http://vtools.xyz:5050', 'docker-login') {
-                dockerImage.push 'latest'
-            }
-        }
     }
 }
